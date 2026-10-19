@@ -1,0 +1,17 @@
+terminal works as a repl -> read - eval - print - loop
+rm -i ... -> means interactive it gives you promt while deleting
+alias rm='rm -i' -> creates an alias for rm which overwrites the default and instead prompts when rm is executed
+touch .file.txt -> a dot added before a file means that it will be created as hidden
+cat /usr/share/dict/cracklib-small -> prints all the words from dictionary it's like a dictionary in your machine
+grep 'nis' /usr/share/dict/cracklib-small -> grep searches and prints any matching word in a line the quotes only matter if you happen to have special characters
+grep '^nis' /usr/share/dict/cracklib-small -> ^ means match the words that start with the given word
+grep 'nis$' /usr/share/dict/cracklib-small -> ^ means match the words that end with the given word
+echo > -> overwrites the value to a file whereas echo >> appends some value to the file -> like echo a > file.txt overwrites file.txt which had a value b whereas echo a >> file.txt appends a to the file and the file will now have a and b in the next line
+grep with flags -A1 means print one more additional line after you find the value searching for and -B1 means print one line before the value 1 can be increased to print the amount of lines
+grep also has -C1 which prints 1 line before and after the value found this C stands for context and same as before the 1 can be increases
+grep -i -> means case insensitive | grep -o -> means only print the part that matches you can also combine arguments like grep -io an example grep -io '^d.' file.txt -> matches the character d and any other character after that and only prints that not the entire line
+| -> pipe is incredibily useful in a sense that this operator can take the output of the command left of it and then supply it as an input to the command right of it kind of like -> cat file.txt | grep i | grep u | grep 1 -> here it will keep on forwarding the output of one command to another until all of iuv matches from a line
+less -> usefull for paging the file can use /... -> here ... searcha specific word and then you can use n meaning next to go to the next occurrence of the word and then Shift + n or N to go backwards kind of like vim you also have g to go to the top and Shift + g or G to got to the end of file
+type initials of a command previously used and press up arrow to get the enitre command from history -> ex sys + up arrow -> systemctl restart iwd from the history
+help -> gives description of builtin commands like history rest use man to get the description
+One of the most useful commands is type -> type grep gives you where it picked up grep from either it is built in or external, does it has an alias etc to get a full list use type -a grep
